@@ -1,17 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- About -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movie Search</title>
+  <head>
+    <!-- About -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Search</title>
 
-  <!-- Linking -->
-  <script src="js/script.js"></script>
-  <link rel="stylesheet" href="style/index.css">
-  <link href="style/output.css" rel="stylesheet" />
-</head>
-<body>
-  
-</body>
+    <!-- Linking -->
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="style/index.css" />
+    <link href="style/output.css" rel="stylesheet" />
+
+    <!-- Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-primary w-full flex justify-center p-5 text-white">
+    <div class="max-w-[100rem] w-full flex flex-col items-center gap-14">
+      <!-- section 1 -->
+      <div class="w-full flex">
+        <div class="min-w-[15%] flex justify-center items-center">
+          <img src="./assets/logo.svg" class="w-32" alt="" />
+        </div>
+        <div
+          class="relative w-full bg-secondary rounded-[40px] flex items-center p-3"
+        >
+          <h1 class="text-9xl font-black text-primHead text-opacity-30">
+            Movicon
+          </h1>
+          <div
+            class="absolute bottom-[-27px] right-28 bg-[#303134] rounded-full min-w-[28rem] px-3 py-1 border-8 border-primary"
+          >
+            <div class="flex w-full items-center gap-2">
+              <input
+                type="text"
+                class="w-full bg-transparent outline-none border-none text-white"
+                placeholder="Search here"
+              />
+              <button class="px-1">
+                <img src="./assets/cross.svg" alt="" class="w-4" />
+              </button>
+              <div class="h-10 border-r border-zinc-600"></div>
+              <button>
+                <img src="./assets/search.svg" alt="" class="w-6" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-[70%] min-h-[70vh] bg-secondary rounded-[40px] p-6">
+        <!-- If no movie -->
+        <div class="w-full h-full flex justify-center items-center">
+          <div class="flex flex-col items-center gap-5">
+            <div>
+              <img src="./assets/Popcorn.svg" alt="" />
+            </div>
+            <div>
+              <h1 class="text-2xl font- text-center text-[#999999]">
+                No Movie Found
+              </h1>
+              <p class="text-center">
+                Search for any movie before getting started.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
