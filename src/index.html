@@ -7,7 +7,7 @@
     <title>Movie Search</title>
 
     <!-- Linking -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="style/index.css" />
     <link href="style/output.css" rel="stylesheet" />
 
@@ -19,42 +19,59 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-primary w-full flex justify-center p-5 text-white">
+  <body class="bg-primary w-full flex justify-center p-3 md:p-5 text-white">
     <div class="max-w-[100rem] w-full flex flex-col items-center gap-14">
       <!-- section 1 -->
       <div class="w-full flex">
-        <div class="min-w-[15%] flex justify-center items-center">
+        <div class="min-w-[15%] hidden xl:flex justify-center items-center">
           <img src="./assets/logo.svg" class="w-32" alt="" />
         </div>
         <div
-          class="relative w-full bg-secondary rounded-[50px] flex items-center p-3"
+          class="relative w-full bg-secondary rounded-[50px] flex justify-center md:justify-start items-center p-3 py-4 pb-14 md:pb-3 md:pt-3"
         >
+          <div class="min-w-[15%] flex xl:hidden justify-center items-center">
+            <img src="./assets/logo.svg" class="w-16 md:w-32" alt="" />
+          </div>
           <h1
-            class="text-[11rem] leading-none font-black text-primHead text-opacity-20"
+            class="text-6xl md:text-9xl 2xl:text-[11rem] leading-none font-black text-primHead text-opacity-20"
           >
             Movicon
           </h1>
           <div
-            class="absolute bottom-[-27px] right-28 bg-[#303134] rounded-full min-w-[35rem] px-4 py-2 border-8 border-primary"
+            class="absolute bottom-[-32px] md:right-28 min-w-full md:min-w-[35rem]"
           >
-            <div class="flex w-full items-center gap-2">
-              <input
-                type="text"
-                class="w-full bg-transparent outline-none border-none text-white"
-                placeholder="Search here"
-              />
-              <button class="px-1">
-                <img src="./assets/cross.svg" alt="" class="w-4" />
-              </button>
-              <div class="h-10 border-r border-zinc-600"></div>
-              <button>
-                <img src="./assets/search.svg" alt="" class="w-6" />
-              </button>
+            <div
+              class="bg-[#303134] rounded-full border-[10px] border-primary px-4 py-2"
+            >
+              <div class="flex w-full items-center gap-2">
+                <input
+                  type="text"
+                  id="searchInput"
+                  class="w-full bg-transparent outline-none border-none text-white"
+                  placeholder="Search here"
+                />
+                <button class="px-1" onclick="cls()">
+                  <img src="./assets/cross.svg" alt="" class="w-4" />
+                </button>
+                <div class="h-10 border-r border-zinc-600"></div>
+                <button>
+                  <img src="./assets/search.svg" alt="" class="w-6" />
+                </button>
+              </div>
+            </div>
+            <!-- Movie List -->
+            <div id="movie-list-container" class="hidden relative px-4">
+              <div
+                id="movie-list-main"
+                class="bg-[#303134] rounded-[15px] p-2 absolute top-0 w-[96%]"
+              ></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="w-[70%] min-h-[50vh] bg-secondary rounded-[50px] p-6">
+      <div
+        class="w-full md:w-[85%] xl:w-[70%] min-h-[50vh] bg-secondary rounded-[50px] p-3 md:p-7"
+      >
         <!-- If no movie -->
         <div
           id="no-movie-div"
@@ -76,13 +93,19 @@
         </div>
 
         <!-- If Movie -->
-        <div id="yes-movie-div" class="flex flex-col gap-6 p-7">
+        <div
+          id="yes-movie-div"
+          class="flex flex-col items-center md:items-start gap-6"
+        >
           <!-- MOvie Title -->
           <div class="flex flex-col gap-3 text-[17px]">
-            <h1 id="movie-heading" class="font-medium text-5xl">
+            <h1
+              id="movie-heading"
+              class="font-medium text-4xl md:text-5xl text-center md:text-left"
+            >
               The Avengers
             </h1>
-            <div class="flex flex-wrap items-center gap-3">
+            <div class="flex flex-wrap justify-center items-center gap-3">
               <!-- Rating -->
               <p
                 class="border border-white bg-primHead bg-opacity-20 text-[14px] rounded-md px-2"
@@ -102,7 +125,9 @@
           </div>
 
           <!-- Movie All Details -->
-          <div class="flex gap-10">
+          <div
+            class="flex flex-col items-center lg:items-start lg:flex-row gap-10"
+          >
             <!-- Poster -->
             <div class="min-w-[40%]">
               <img
@@ -129,7 +154,7 @@
               </div>
 
               <!-- Plot -->
-              <p class="text-justify">
+              <p class="">
                 Earth's mightiest heroes must come together and learn to fight
                 as a team if they are going to stop the mischievous Loki and his
                 alien army from enslaving humanity.
@@ -167,7 +192,7 @@
               <div class="border-t border-zinc-600"></div>
 
               <!-- Ratings -->
-              <div class="flex gap-5">
+              <div class="flex flex-wrap flex-col md:flex-row gap-5">
                 <div class="flex flex-col items-center justify-center">
                   <p>8/10</p>
                   <p class="font-medium text-primHead text-center">IMDb</p>
