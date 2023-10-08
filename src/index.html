@@ -50,36 +50,40 @@
                   class="w-full bg-transparent outline-none border-none text-white"
                   placeholder="Search here"
                 />
-                <button class="px-1" onclick="cls()">
-                  <img src="./assets/cross.svg" alt="" class="w-4" />
+                <button class="px-1" id="clear-btn" style="display: none">
+                  <img src="./assets/cross.svg" alt="clear icon" class="w-4" />
                 </button>
                 <div class="h-10 border-r border-zinc-600"></div>
                 <button>
-                  <img src="./assets/search.svg" alt="" class="w-6" />
+                  <img
+                    src="./assets/search.svg"
+                    alt="search icon"
+                    class="w-6"
+                  />
                 </button>
               </div>
             </div>
             <!-- Movie List -->
-            <div id="movie-list-container" class="relative px-3">
+            <div
+              id="movie-list-container"
+              style="display: none"
+              class="relative px-3"
+            >
               <div
                 id="movie-list-main"
                 class="bg-[#303134] rounded-sm absolute top-0 w-[95%] max-h-[50vh] overflow-y-auto"
                 style="box-shadow: 0px 4px 15px 8px rgba(0, 0, 0, 0.25)"
               >
                 <!-- Sample -->
-                <button
+                <!-- <button
                   class="w-full p-2 flex gap-3 items-center hover:bg-primHead hover:bg-opacity-10 border-b-1 border-primary"
                 >
-                  <img
-                    src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
-                    alt="image poster"
-                    class="w-12"
-                  />
+                  <img src="" alt="image poster" class="w-12" />
                   <div class="flex flex-col items-start gap-3">
                     <h2 class="font-medium text-lg">The Avengers</h2>
                     <p class="text-zinc-400">2012</p>
                   </div>
-                </button>
+                </button> -->
               </div>
             </div>
           </div>
