@@ -7,7 +7,7 @@
     <title>Movie Search</title>
 
     <!-- Linking -->
-    <script src="js/script.js" defer></script>
+    <script src="js/script.js" type="module" defer></script>
     <link rel="stylesheet" href="style/index.css" />
     <link href="style/output.css" rel="stylesheet" />
 
@@ -38,7 +38,7 @@
             Movicon
           </h1>
           <div
-            class="absolute bottom-[-32px] md:right-28 min-w-full md:min-w-[35rem]"
+            class="absolute bottom-[-32px] md:right-28 min-w-full md:min-w-[30rem]"
           >
             <div
               class="bg-[#303134] rounded-full border-[10px] border-primary px-4 py-2"
@@ -60,11 +60,27 @@
               </div>
             </div>
             <!-- Movie List -->
-            <div id="movie-list-container" class="hidden relative px-4">
+            <div id="movie-list-container" class="relative px-3">
               <div
                 id="movie-list-main"
-                class="bg-[#303134] rounded-[15px] p-2 absolute top-0 w-[96%]"
-              ></div>
+                class="bg-[#303134] rounded-sm absolute top-0 w-[95%] max-h-[50vh] overflow-y-auto"
+                style="box-shadow: 0px 4px 15px 8px rgba(0, 0, 0, 0.25)"
+              >
+                <!-- Sample -->
+                <button
+                  class="w-full p-2 flex gap-3 items-center hover:bg-primHead hover:bg-opacity-10 border-b-1 border-primary"
+                >
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+                    alt="image poster"
+                    class="w-12"
+                  />
+                  <div class="flex flex-col items-start gap-3">
+                    <h2 class="font-medium text-lg">The Avengers</h2>
+                    <p class="text-zinc-400">2012</p>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -75,7 +91,7 @@
         <!-- If no movie -->
         <div
           id="no-movie-div"
-          class="hidden w-full h-full flex justify-center items-center"
+          class="w-full h-full flex justify-center items-center"
         >
           <div class="flex flex-col items-center gap-5">
             <div>
@@ -95,7 +111,7 @@
         <!-- If Movie -->
         <div
           id="yes-movie-div"
-          class="flex flex-col items-center md:items-start gap-6"
+          class="hidden flex-col items-center md:items-start gap-6"
         >
           <!-- MOvie Title -->
           <div class="flex flex-col gap-3 text-[17px]">
