@@ -120,7 +120,6 @@ async function display(id) {
         ${rating !== movie.Ratings[movie.Ratings.length - 1] ? '<div class="border-r border-zinc-600"></div>' : ''}
         `
       })
-      console.log(ratings)
     }
 
     const others = `
@@ -190,6 +189,7 @@ async function display(id) {
     `;
 
     movieDiv.innerHTML = title + others;
+    cls()
   } catch (error) {
     console.error(error);
   }
@@ -265,9 +265,11 @@ searchInput.addEventListener("keyup", async (e) => {
 });
 
 // Clear input field
-clearBtn.addEventListener("click", () => {
+clearBtn.addEventListener("click", cls);
+
+function cls(){
   searchInput.value = "";
-  searchInput.focus();
-});
+  movieListContainer.style.display = "none";
+}
 
 // ======================== Search Functions - End ========================
