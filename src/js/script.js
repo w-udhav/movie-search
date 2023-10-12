@@ -1,38 +1,5 @@
 const BASE_URL = "http://www.omdbapi.com";
-const API_KEY = "f57139b0";
-
-const sample = [
-  {
-    Title: "Även om vi faller",
-    Year: "2014",
-    imdbID: "tt4300958",
-    Type: "movie",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BOTA4MzMzOWYtYzlhNC00NzU1LWJjMTgtMzZkYzBkNjAyN2UxXkEyXkFqcGdeQXVyMTEzMzkwMDc1._V1_SX300.jpg",
-  },
-  {
-    Title: "Frida: Även en blomma",
-    Year: "1996",
-    imdbID: "tt11802606",
-    Type: "movie",
-    Poster: "N/A",
-  },
-  {
-    Title: "Även clowner gråter",
-    Year: "2011",
-    imdbID: "tt14608290",
-    Type: "movie",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BN2Q2OTdiYzctOWJiMy00ZWYzLTkwNjQtYzRlZTE3YWE4ODE0XkEyXkFqcGdeQXVyMTMyNTk2ODU@._V1_SX300.jpg",
-  },
-  {
-    Title: "La copiste de Pont-Aven",
-    Year: "2011",
-    imdbID: "tt2246805",
-    Type: "movie",
-    Poster: "N/A",
-  },
-];
+const API_KEY = "";
 
 // ======================== Movie Section - Start ========================
 let noMovieDiv = document.getElementById("no-movie-div");
